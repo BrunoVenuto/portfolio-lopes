@@ -3,25 +3,69 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --accent: #f5c400;
+  --frame: rgba(245, 196, 0, 0.28);
+  --panel: rgba(0, 0, 0, 0.42);
+  --stroke: rgba(255, 255, 255, 0.10);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  height: 100%;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 0.92);
+  background: #0b0b0b;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+::selection {
+  background: rgba(245, 196, 0, 0.25);
+}
+
+@layer components {
+  .frame {
+    position: relative;
+    border-radius: 24px;
+    border: 1px solid var(--stroke);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45));
+    overflow: hidden;
+  }
+
+  .frame::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 10px;
+    border-radius: 18px;
+    border: 1px solid var(--frame);
+  }
+
+  .panel {
+    border-radius: 24px;
+    border: 1px solid var(--stroke);
+    background: var(--panel);
+    backdrop-filter: blur(10px);
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee {
+  width: max-content;
+  animation: marquee var(--marquee-speed, 40s) linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    animation: none;
+    transform: none;
   }
 }
