@@ -16,7 +16,9 @@ export default function ProjectsMarquee() {
       <div className="mt-6">
         <div
           className="marquee flex gap-6 px-4"
-          style={{ ["--marquee-speed" as any]: `${projects.speedSeconds}s` }}
+          style={{
+            ["--marquee-speed" as `--${string}`]: `${projects.speedSeconds}s`,
+          }}
         >
           {items.map((p, i) => (
             <div
