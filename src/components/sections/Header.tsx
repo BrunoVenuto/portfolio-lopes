@@ -54,6 +54,7 @@ export default function Header() {
             {/* ✅ BOTÃO AJUSTADO SOMENTE NO MOBILE */}
             <Button
               href={header.cta.href}
+              external={header.cta.external}
               pulse
               className="h-9 px-3 text-xs md:h-10 md:px-4 md:text-sm"
             >
@@ -81,6 +82,7 @@ export default function Header() {
                   {/* ✅ BOTÃO DO MENU MOBILE TAMBÉM AJUSTADO */}
                   <Button
                     href={header.cta.href}
+                    external={header.cta.external}
                     pulse
                     className="w-full justify-center h-9 text-xs"
                   >

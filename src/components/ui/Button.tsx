@@ -3,11 +3,13 @@ import { cn } from "@/lib/cn";
 type Props = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   variant?: "primary" | "ghost";
   pulse?: boolean;
+  external?: boolean;
 };
 
 export default function Button({
   variant = "primary",
   pulse = false,
+  external = false,
   className,
   ...props
 }: Props) {
@@ -20,6 +22,9 @@ export default function Button({
       : "bg-white/10 text-white hover:bg-white/15 border border-white/10";
 
   return (
-    <a className={cn(base, styles, pulse && "animate-pulse", className)} {...props} />
+    <a className={cn(base, styles, pulse && "animate-pulse", className)} 
+      {...(external && { target: "_blank", rel: "noopener noreferrer" })}
+      {...props}
+    />
   );
 }
