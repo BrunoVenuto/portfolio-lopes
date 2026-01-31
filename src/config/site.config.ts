@@ -220,7 +220,7 @@ export const siteConfig = {
       } satisfies CTA,
       {
         label: "Enviar Email",
-        href: "mailto:seuemail@dominio.com",
+        href: "mailto:brunovlviana41@gmail.com",
         external: true,
       } satisfies CTA,
     ],
