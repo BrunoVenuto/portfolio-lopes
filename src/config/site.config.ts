@@ -62,15 +62,24 @@ export const siteConfig = {
       pulse: true,
     } satisfies CTA,
     socials: [
-      { label: "GitHub", href: "https://github.com/BrunoVenuto", external: true },
-      { label: "LinkedIn", href: "https://linkedin.com/in/seuuser", external: true },
+      {
+        label: "GitHub",
+        href: "https://github.com/BrunoVenuto",
+        external: true,
+      },
+      {
+        label: "LinkedIn",
+        href: "https://linkedin.com/in/seuuser",
+        external: true,
+      },
     ] satisfies LinkItem[],
   },
 
   hero: {
     kicker: "DESENVOLVEDOR FULL STACK",
     title: "BRUNO LOPES",
-    subtitle: "Construo sistemas, SaaS e soluções completas — do backend ao frontend.",
+    subtitle:
+      "Construo sistemas, SaaS e soluções completas — do backend ao frontend.",
     image: "/images/hero.jpg",
     imageObjectPosition: "60% 29%",
     ctas: [
@@ -106,12 +115,14 @@ export const siteConfig = {
     items: [
       {
         title: "Frontend",
-        description: "Interfaces modernas, rápidas e focadas em conversão e usabilidade.",
+        description:
+          "Interfaces modernas, rápidas e focadas em conversão e usabilidade.",
         tags: ["React", "Next.js", "Tailwind", "UX/UI"],
       },
       {
         title: "Backend",
-        description: "APIs, autenticação, regras de negócio e integrações robustas.",
+        description:
+          "APIs, autenticação, regras de negócio e integrações robustas.",
         tags: ["Node.js", "Supabase", "PostgreSQL", "REST"],
       },
       {
@@ -184,13 +195,22 @@ export const siteConfig = {
         objectPosition: "50% 45%",
         tags: ["Frontend", "SEO"],
       },
+      {
+        title: "Brutal-Barber-Shop",
+        subtitle: "Gestão para barbearias",
+        href: "#",
+        image: "/images/brutal-baber.png",
+        objectPosition: "50% 45%",
+        tags: ["SaaS", "Next.js"],
+      },
     ] satisfies Project[],
   },
 
   contact: {
     id: "contato",
     title: "Vamos construir seu sistema?",
-    subtitle: "Se você quer um sistema com cara de produto profissional, vamos conversar.",
+    subtitle:
+      "Se você quer um sistema com cara de produto profissional, vamos conversar.",
     buttons: [
       {
         label: "Falar no WhatsApp",
