@@ -147,7 +147,7 @@ export const siteConfig = {
         title: "APIs e Backends",
         description: "Estruturas robustas, seguras e escaláveis.",
         image: "/images/build-2.jpg",
-        objectPosition: "55% 35%",
+        objectPosition: "45% 25%",
       },
       {
         title: "Dashboards e Painéis",
