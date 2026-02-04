@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Bruno Lopes | Full Stack Developer",
   description:
     "Portfólio profissional de Bruno Lopes — desenvolvimento web moderno com Next.js, TypeScript e foco em conversão.",
-
   metadataBase: new URL("https://portfolio-fullstack-lopes.vercel.app"),
-
   openGraph: {
     title: "Bruno Lopes | Full Stack Developer",
     description:
       "Portfólio profissional com projetos reais, foco em performance, UI moderna e resultados para negócios.",
-    url: "https://portfolio-fullstack-lopes.vercel.app",
+    url: "https://portfolio-fullstack-lopes.vercel.app/",
     siteName: "Bruno Lopes",
     images: [
       {
@@ -24,7 +24,6 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Bruno Lopes | Full Stack Developer",
@@ -33,3 +32,11 @@ export const metadata: Metadata = {
     images: ["/og.png"],
   },
 };
+
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html lang="pt-BR">
+      <body>{children}</body>
+    </html>
+  );
+}
