@@ -203,6 +203,14 @@ export const siteConfig = {
         objectPosition: "50% 45%",
         tags: ["SaaS", "Next.js"],
       },
+      {
+        title: "Barber Flow",
+        subtitle: "SaaS de agendamento de barbearias",
+        href: "#",
+        image: "/images/brutal-flow.png",
+        objectPosition: "50% 45%",
+        tags: ["SaaS", "Next.js"],
+      },
     ] satisfies Project[],
   },
 
