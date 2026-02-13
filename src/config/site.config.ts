@@ -207,7 +207,7 @@ export const siteConfig = {
         title: "Barber Flow",
         subtitle: "SaaS de agendamento de barbearias",
         href: "#",
-        image: "/images/brutal flow.png",
+        image: "/images/barber flow.png",
         objectPosition: "50% 45%",
         tags: ["SaaS", "Next.js"],
       },
